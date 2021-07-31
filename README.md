@@ -1,6 +1,6 @@
 # Automatic employee's data excel sheet generator
 
-The Application automatically generates information about a particular employee. It asks the user to enter the PS number of the required employee and then reads the data from an Excel file named "EmployeeData.xlsx", which contains all the information about all the Employees of the company, generates a new excel file named "Data.xlsx" in which only the data corresponding that particular PS number is stored.
+The Application automatically generates information about a particular employee. It asks the user to enter the PS number of the concerned employee and then reads the data from an excel file named "EmployeeData.xlsx", which contains all the information about all the employees of the company, generates a new excel file named "Data.xlsx" in which only the data corresponding that particular PS number is stored.
 
 ## Generated Excel sheet looks like: 
 
