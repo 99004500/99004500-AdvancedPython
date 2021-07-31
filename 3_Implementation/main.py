@@ -21,10 +21,7 @@ def rownumber(sheet, ps_number):
             if cell_value == ps_number:
                 ps_row = i
                 break
-        if ps_row == 0:
-            ps_number = int(input("\nPlease Enter Valid PS Number: "))
-        else:
-            return ps_row
+        return ps_row
 
 
 Reading_wb = openpyxl.load_workbook("EmployeeData.xlsx")
@@ -32,13 +29,15 @@ Reading_wb = openpyxl.load_workbook("EmployeeData.xlsx")
 PS = int(input("\nEnter the unique PS Number of the"
                " concerned Employee between 88002500 and 88002514: "))
 
+if PS < 88002500 or PS > 88002514:
+    PS = int(input("\nPlease Enter Valid PS Number: "))
+
 sheet1 = Reading_wb['SemGrades']
 sheet2 = Reading_wb['ProgramLang']
 sheet3 = Reading_wb['DomainExpertise']
 sheet4 = Reading_wb['Hobbies']
 sheet5 = Reading_wb['CitiesTravelled']
 
-print(sheet1.max_row)
 PS_row = rownumber(sheet1, PS)
 
 
@@ -234,3 +233,4 @@ for row in rows:
                                                 vertical='center', wrap_text=True)
 
 New_wb1.save("Data.xlsx")
+print("Code Ended.. Data sheet generated in the folder, Please check. Thank you\n")
